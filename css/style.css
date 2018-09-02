@@ -13,7 +13,14 @@ ul,ol{
 }
 
 ul.suggestion{
-  display:none;
+  position:absolute;
+  left:0;
+  top:100%;
+  display:none; 
+}
+
+ul.suggestion.active{
+  display:block;
 }
 
 body{
@@ -25,7 +32,8 @@ body{
 }
 
 .wrapper{
-  border:1px solid red;
+  display:flex;
+  position:relative;
 }
 
 .inputWrapper{
@@ -39,6 +47,22 @@ body{
 
 .inputWrapper + button{
   float:left;
+}
+.inputWrapper +button:focus{
+  outline:none;
+}
+
+.inputWrapper +button:hover{
+  box-shadow:1px 1px 1px 0 rgba(0,0,0,0.2);
+  background:#3781f0;
+}
+
+.inputWrapper + button{
+  background:#3988f8;
+  border:none;
+  font-size:14px;
+  color:white;
+  padding:0 20px;
 }
 
 .inputWrapper input[type=text]{
@@ -56,7 +80,39 @@ body{
 }
 .flexDiv{
   position:absolute;
-  border:1px solid black;
   right:0;
   top:0;
+  height:100%;
+  display:flex;
+  justify-content:cneter;
+  align-items:center;
+  margin-right:10px;
+  color:#b8b8b8;
+}
+.flexDiv .seperator{
+  width:0;
+  height:16px;
+  border:1px solid;
+  margin:0 12px;
+}
+
+.icon {
+  width: 1em; height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+.inputWrapper svg.icon{
+  width:20px;
+  height:20px;
+  fill:#b8b8b8;
+}
+
+
+.inputWrapper svg.icon:hover{
+  fill:#4b94fc;
+  cursor:pointer;
+}
+.wrapper button:hover{
+  cursor:pointer;
 }
