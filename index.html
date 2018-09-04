@@ -5,13 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <script src="//at.alicdn.com/t/font_819421_9uriuiyqq.js"></script>
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
   <div class="wrapper">
     <span class="inputWrapper">
-      <input type="text">
+      <input id="keyword" type="text" atuocomplete="off">
       <span class="flexDiv">
         <svg class="icon"> 
             <use xlink:href="#icon-mic"></use>
@@ -23,12 +22,14 @@
       </span>
     </span>
     <button>百度一下</button>
-    <ul class="suggestion">
+    <ul id="suggestion" class="suggestion">
       <li>选项1</li>
       <li>选项2</li>
       <li>选项3</li>
       <li>选项4</li>
     </ul>
   </div>
+  <script src="//at.alicdn.com/t/font_819421_9uriuiyqq.js"></script>
+  <script src="./main.js"></script>
 </body>
 </html>
